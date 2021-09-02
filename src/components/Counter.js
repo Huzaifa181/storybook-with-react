@@ -6,8 +6,12 @@ function Counter(props) {
     <div className='counter' style={{background:props.background}}>
         Hello Counter {props.initialValue}
     <br />
-    <Button title="Increament"></Button>
-    <Button title="Decreament"></Button>
+    <Button title="Increament" size="small" onClick={()=>{
+        alert("Increament")
+    }}></Button>
+    <Button title="Decreament" size="large" onClick={()=>{
+        alert("Decreament")
+    }}></Button>
     </div> 
   );
 }

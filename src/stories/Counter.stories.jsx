@@ -1,8 +1,12 @@
+import React from "react";
 import Counter from '../components/Counter'
+import {withKnobs, number, object} from "@storybook/addon-knobs"
+//knos is used to change the dynamic value in real time story book run on local host
 
 export default {
     title:"Counter",
-    component:Counter
+    component:Counter,
+    decorators:[withKnobs]
 }
 
 export function CounterDefault() {
@@ -13,7 +17,7 @@ export function CounterDefault() {
 
 export function CounterWithValue() {
     return(
-        <Counter initialValue={34}></Counter>
+        <Counter initialValue={number("initialValue", 34)}></Counter>
     )
 }
 

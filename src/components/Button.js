@@ -2,9 +2,10 @@ import React from "react";
 
 
 function Button(props) {
+    const size=props.size
   return (
-    <button onClick={()=>{
-        alert("hello")
+    <button className={["buttonDefault",size].join(" ")} onClick={()=>{
+       props.onClick()
     }}>{props.title}</button>
   );
 }
